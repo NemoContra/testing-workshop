@@ -1,7 +1,7 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/flight-app/src",
-  "prefix": "testing-workshop",
+  "prefix": "flight",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

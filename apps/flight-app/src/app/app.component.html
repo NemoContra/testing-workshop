@@ -1,9 +1,13 @@
-<div style="text-align: center">
-  <h1>Welcome to flight-app!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
+<div class="wrapper">
+  <div class="sidebar" data-background-color="white" data-active-color="danger">
+    <flight-sidebar></flight-sidebar>
+  </div>
+
+  <div class="main-panel">
+    <flight-navbar></flight-navbar>
+
+    <div class="content">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
