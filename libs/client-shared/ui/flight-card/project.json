@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client-shared/ui/flight-card/src",
+  "prefix": "flight-card",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client-shared/ui/flight-card"],
+      "options": {
+        "jestConfig": "libs/client-shared/ui/flight-card/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client-shared/ui/flight-card/**/*.ts",
+          "libs/client-shared/ui/flight-card/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

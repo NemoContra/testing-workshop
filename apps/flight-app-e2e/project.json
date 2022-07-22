@@ -23,6 +23,6 @@
       }
     }
   },
-  "tags": [],
+  "tags": ["flight-app-e2e"],
   "implicitDependencies": ["flight-app"]
 }

@@ -1,5 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, Renderer2 } from '@angular/core';
+import { getHTMLBodyElement } from '../common/get-body';
 
 @Component({
   selector: 'flight-navbar',
@@ -8,17 +8,19 @@ import { DOCUMENT } from '@angular/common';
 export class NavbarComponent {
   private sidebarVisible = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  private body = getHTMLBodyElement();
 
-  sidebarToggle() {
-    const body = this.document.body;
+  constructor(private renderer: Renderer2) {}
 
-    if (!this.sidebarVisible) {
-      body.classList.add('nav-open');
-      this.sidebarVisible = true;
-    } else {
+  sidebarToggle(): void {
+    if (this.sidebarVisible) {
       this.sidebarVisible = false;
-      body.classList.remove('nav-open');
+      this.body.classList.remove('nav-open');
+      this.renderer.removeClass(this.body, 'nav-open');
+      return;
     }
+
+    this.sidebarVisible = true;
+    this.renderer.addClass(this.body, 'nav-open');
   }
 }

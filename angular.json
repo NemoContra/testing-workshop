@@ -3,8 +3,9 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
+    "client-shared-ui-flight-card": "libs/client-shared/ui/flight-card",
     "flight-app": "apps/flight-app",
-    "flight-app-e2e": "apps/flight-app-e2e"
+    "flight-app-e2e": "apps/flight-app-e2e",
+    "shared-util-api-interfaces": "libs/shared/util/api-interfaces"
   }
 }
