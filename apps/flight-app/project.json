@@ -17,7 +17,13 @@
           "apps/flight-app/src/favicon.ico",
           "apps/flight-app/src/assets"
         ],
-        "styles": ["apps/flight-app/src/styles.scss"],
+        "styles": [
+          "apps/flight-app/src/styles.scss",
+          "apps/flight-app/src/assets/css/bootstrap.min.css",
+          "apps/flight-app/src/assets/css/paper-dashboard.css",
+          "apps/flight-app/src/assets/css/demo.css",
+          "apps/flight-app/src/assets/css/themify-icons.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -68,6 +74,13 @@
         "proxyConfig": "apps/flight-app/proxy.conf.json"
       }
     },
+    "serve-with-api": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["nx serve flight-app", "nx serve api"],
+        "parallel": true
+      }
+    },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
@@ -92,5 +105,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:flight-app"]
 }

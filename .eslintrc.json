@@ -13,8 +13,63 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "scope:flight-app",
+                "onlyDependOnLibsWithTags": [
+                  "scope:flight-app",
+                  "scope:client-shared",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:api",
+                "onlyDependOnLibsWithTags": [
+                  "scope:api",
+                  "scope:server-shared",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:client-shared",
+                "onlyDependOnLibsWithTags": [
+                  "scope:client-shared",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:server-shared",
+                "onlyDependOnLibsWithTags": [
+                  "scope:server-shared",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:util", "type:ui"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": [
+                  "type:util",
+                  "type:ui",
+                  "type:data-access"
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:util",
+                  "type:ui",
+                  "type:data-access",
+                  "type:feature"
+                ]
               }
             ]
           }

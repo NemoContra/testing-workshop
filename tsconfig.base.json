@@ -14,8 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "strictNullChecks": true,
     "paths": {
-      "@testing-workshop/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@testing-workshop/client-shared/ui/flight-card": [
+        "libs/client-shared/ui/flight-card/src/index.ts"
+      ],
+      "@testing-workshop/shared/util/api-interfaces": [
+        "libs/shared/util/api-interfaces/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
