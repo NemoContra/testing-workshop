@@ -4,8 +4,10 @@
   "projects": {
     "api": "apps/api",
     "client-shared-ui-flight-card": "libs/client-shared/ui/flight-card",
+    "client-shared-util-common": "libs/client-shared/util/common",
     "flight-app": "apps/flight-app",
     "flight-app-e2e": "apps/flight-app-e2e",
-    "shared-util-api-interfaces": "libs/shared/util/api-interfaces"
+    "shared-util-api-interfaces": "libs/shared/util/api-interfaces",
+    "shared-util-common": "libs/shared/util/common"
   }
 }

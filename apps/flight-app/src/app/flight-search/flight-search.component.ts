@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import {
-  FindSearchQueryParams,
+  debounceTime,
+  distinctUntilChanged,
+  Observable,
+  Subject,
+  switchMap,
+  takeUntil,
+} from 'rxjs';
+import {
   Flight,
+  SearchFlightsQueryParams,
 } from '@testing-workshop/shared/util/api-interfaces';
 import { FlightService } from '../services/flight.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -11,20 +18,35 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   selector: 'flight-flight-search',
   templateUrl: './flight-search.component.html',
   styleUrls: ['./flight-search.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FlightSearchComponent {
-  flights$?: Observable<Flight[]>;
+export class FlightSearchComponent implements OnDestroy {
+  private destroy$$ = new Subject<void>();
 
-  flightsSearchFormGroup = new FormGroup({
+  searchFlightsFormGroup = new FormGroup({
     from: new FormControl('', [Validators.required]),
     to: new FormControl('', [Validators.required]),
   });
 
+  flights$?: Observable<Flight[]> =
+    this.searchFlightsFormGroup.valueChanges.pipe(
+      debounceTime(250),
+      distinctUntilChanged(),
+      switchMap((searchFlightsQueryParams) =>
+        this.searchFlights(searchFlightsQueryParams as SearchFlightsQueryParams)
+      ),
+      takeUntil(this.destroy$$)
+    );
+
   constructor(private flightService: FlightService) {}
 
-  findFlights(): void {
-    const { from, to } = this.flightsSearchFormGroup
-      .value as FindSearchQueryParams;
-    this.flights$ = this.flightService.findFlight({ from, to });
+  ngOnDestroy(): void {
+    this.destroy$$.next();
+  }
+
+  private searchFlights(
+    searchFlightsQueryParams: SearchFlightsQueryParams
+  ): Observable<Flight[]> {
+    return this.flightService.searchFlights(searchFlightsQueryParams);
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-  FindSearchQueryParams,
+  SearchFlightsQueryParams,
   Flight,
   FIND_FLIGHT_FROM,
   FIND_FLIGHT_TO,
@@ -17,10 +17,10 @@ export class FlightService {
     return this.httpClient.get<Flight[]>(`${API_URL}/flight`);
   }
 
-  findFlight({
+  searchFlights({
     from,
     to,
-  }: Partial<FindSearchQueryParams>): Observable<Flight[]> {
+  }: Partial<SearchFlightsQueryParams>): Observable<Flight[]> {
     return this.httpClient.get<Flight[]>(`${API_URL}/flight`, {
       params: new HttpParams({
         fromObject: {
