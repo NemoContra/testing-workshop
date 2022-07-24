@@ -1,1 +1,5 @@
-export const getGreeting = () => cy.get('h1');
+export const selectors = {
+  home: {
+    greeting: '[data-tid="home-greeting"]',
+  },
+} as const;
