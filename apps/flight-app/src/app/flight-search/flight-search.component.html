@@ -1,16 +1,16 @@
 <div class="card">
   <div class="header">
-    <h2 class="title">Flight Search</h2>
+    <h2 class="title">Search Flights</h2>
   </div>
-  <div class="content">
+  <div class="content" data-tid="content">
     <form [formGroup]="searchFlightsFormGroup">
       <div class="form-group">
         <label>From:</label>
-        <input formControlName="from" class="form-control" />
+        <input formControlName="from" class="form-control" data-tid="from" />
       </div>
       <div class="form-group">
         <label>To:</label>
-        <input formControlName="to" name="to" class="form-control" />
+        <input formControlName="to" class="form-control" data-tid="to" />
       </div>
 
       <div *ngIf="flights$ | async as flights">

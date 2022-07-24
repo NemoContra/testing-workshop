@@ -12,7 +12,7 @@ import {
   SearchFlightsQueryParams,
 } from '@testing-workshop/shared/util/api-interfaces';
 import { FlightService } from '../services/flight.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'flight-flight-search',
@@ -24,8 +24,8 @@ export class FlightSearchComponent implements OnDestroy {
   private destroy$$ = new Subject<void>();
 
   searchFlightsFormGroup = new FormGroup({
-    from: new FormControl('', [Validators.required]),
-    to: new FormControl('', [Validators.required]),
+    from: new FormControl(''),
+    to: new FormControl(''),
   });
 
   flights$: Observable<Flight[]> =

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should match snapshot 1`] = `
+<flight-app
+  __ngContext__="0"
+  destroy$$={[Function Subject]}
+  easterEgg$={[Function Observable]}
+  window={[Function Object]}
+>
+  <div
+    class="wrapper"
+  >
+    <div
+      class="sidebar"
+      data-active-color="danger"
+      data-background-color="white"
+    >
+      <flight-sidebar />
+    </div>
+    <div
+      class="main-panel"
+    >
+      <flight-navbar />
+      <div
+        class="content"
+      >
+        <router-outlet />
+      </div>
+    </div>
+  </div>
+</flight-app>
+`;

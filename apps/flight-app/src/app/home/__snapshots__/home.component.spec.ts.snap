@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent should match snapshot 1`] = `
+<flight-home
+  __ngContext__="0"
+>
+  <div
+    class="header"
+  >
+    <p
+      class="title"
+      data-tid="home-greeting"
+    >
+      Welcome to Flight-App
+    </p>
+  </div>
+</flight-home>
+`;
