@@ -7,8 +7,7 @@
     "start": "nx run flight-app:serve-with-api",
     "build": "nx build",
     "test": "nx test",
-    "format": "nx format",
-    "postinstall": "ngcc --properties es2020 browser module main"
+    "format": "nx format"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +26,6 @@
     "@nrwl/angular": "14.4.3",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.4.0",
-    "rxjs-marbles": "7.0.1",
     "tslib": "2.0.0",
     "uuid": "8.3.2",
     "zone.js": "0.11.4"
@@ -60,6 +58,7 @@
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
     "cypress": "9.1.0",
+    "dotenv": "16.0.1",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "2.10.3",
@@ -70,6 +69,7 @@
     "ng-mocks": "14.1.0",
     "nx": "14.4.3",
     "prettier": "2.6.2",
+    "rxjs-marbles": "7.0.1",
     "ts-jest": "27.1.4",
     "ts-node": "10.8.0",
     "type-fest": "2.17.0",
