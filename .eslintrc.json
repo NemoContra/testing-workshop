@@ -21,6 +21,13 @@
                 ]
               },
               {
+                "sourceTag": "scope:flight-app-e2e",
+                "onlyDependOnLibsWithTags": [
+                  "scope:client-shared",
+                  "scope:shared"
+                ]
+              },
+              {
                 "sourceTag": "scope:api",
                 "onlyDependOnLibsWithTags": [
                   "scope:api",
