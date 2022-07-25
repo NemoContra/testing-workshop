@@ -28,7 +28,7 @@ export class FlightSearchComponent implements OnDestroy {
     to: new FormControl('', [Validators.required]),
   });
 
-  flights$?: Observable<Flight[]> =
+  flights$: Observable<Flight[]> =
     this.searchFlightsFormGroup.valueChanges.pipe(
       debounceTime(250),
       distinctUntilChanged(),
