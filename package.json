@@ -7,7 +7,9 @@
     "start": "nx run flight-app:serve-with-api",
     "build": "nx build",
     "test": "nx test",
-    "format": "nx format"
+    "e2e": "nx e2e flight-app-e2e",
+    "format": "nx format",
+    "postinstall": "node default-env.mjs"
   },
   "private": true,
   "dependencies": {
