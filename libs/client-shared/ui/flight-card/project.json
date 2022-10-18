@@ -19,6 +19,15 @@
           "libs/client-shared/ui/flight-card/**/*.html"
         ]
       }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/client-shared/ui/flight-card/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "flight-app:build"
+      }
     }
   },
   "tags": ["scope:client-shared", "type:ui"]
