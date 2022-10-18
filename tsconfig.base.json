@@ -19,6 +19,9 @@
       "@testing-workshop/client-shared/ui/flight-card": [
         "libs/client-shared/ui/flight-card/src/index.ts"
       ],
+      "@testing-workshop/client-shared/ui/flight-card/testing": [
+        "libs/client-shared/ui/flight-card/testing/src/index.ts"
+      ],
       "@testing-workshop/client-shared/util/common": [
         "libs/client-shared/util/common/src/index.ts"
       ],
@@ -27,6 +30,12 @@
       ],
       "@testing-workshop/shared/util/common": [
         "libs/shared/util/common/src/index.ts"
+      ],
+      "@testing-workshop/shared/util/mock-data": [
+        "libs/shared/util/mock-data/src/index.ts"
+      ],
+      "@testing-workshop/shared/util/test-helpers": [
+        "libs/shared/util/test-helpers/src/index.ts"
       ]
     }
   },

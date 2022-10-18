@@ -103,6 +103,15 @@
         "jestConfig": "apps/flight-app/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/flight-app/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "flight-app:build"
+      }
     }
   },
   "tags": ["scope:flight-app"]

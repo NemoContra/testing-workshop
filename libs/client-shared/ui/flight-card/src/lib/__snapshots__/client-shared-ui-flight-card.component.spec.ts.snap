@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClientSharedUiFlightCardComponent should render card with flight from Graz to Hamburg and selected: false 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="false"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: white;"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Hamburg
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            2
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 12, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="select-button"
+          >
+             Select 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should render card with flight from Graz to Hamburg and selected: true 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="true"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: rgb(204, 197, 185);"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Hamburg
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            2
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 12, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="deselect-button"
+          >
+             Remove 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should render card with flight from Graz to Mallorca and selected: false 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="false"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: white;"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Mallorca
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            1
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 15, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="select-button"
+          >
+             Select 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should render card with flight from Graz to Mallorca and selected: true 1`] = `
+<ng-component
+  __ngContext__="0"
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="true"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: rgb(204, 197, 185);"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Mallorca
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            1
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 15, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="deselect-button"
+          >
+             Remove 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should select and deselect a card: deselected 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="false"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: white;"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Mallorca
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            1
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 15, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="select-button"
+          >
+             Select 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should select and deselect a card: selected 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-card>
+    <div
+      class="card"
+      data-is-selected="true"
+      data-tid="flight-card"
+      id="flight-card-c1bfb6ed-5503-4549-8914-686553a408e1"
+      style="background-color: rgb(204, 197, 185);"
+    >
+      <div
+        class="header"
+      >
+        <h2
+          class="title"
+          data-tid="header-text"
+        >
+          <span
+            data-tid="flight-from"
+          >
+            Graz
+          </span>
+           - 
+          <span
+            data-tid="flight-to"
+          >
+            Mallorca
+          </span>
+        </h2>
+      </div>
+      <div
+        class="content"
+      >
+        <p>
+           Flight-No.: #
+          <span
+            data-tid="flight-no"
+          >
+            1
+          </span>
+        </p>
+        <p>
+           Date: 
+          <span
+            data-tid="flight-date"
+          >
+            October 15, 2020 at 6:22:52 AM GMT+0
+          </span>
+        </p>
+        <p>
+           Delayed: 
+          <span
+            data-tid="flight-delayed"
+          >
+            no
+          </span>
+        </p>
+        <p>
+          <button
+            class="btn btn-default"
+            data-tid="deselect-button"
+          >
+             Remove 
+          </button>
+        </p>
+      </div>
+    </div>
+  </flight-card>
+</ng-component>
+`;
+
+exports[`ClientSharedUiFlightCardComponent should select and deselect a card: selectedChange 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        true,
+      ],
+      Array [
+        false,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;

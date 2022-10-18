@@ -1,8 +1,8 @@
 <div class="card">
   <div class="header">
-    <h2 class="title">All Flights</h2>
+    <h2 class="title" data-tid="card-title">All Flights</h2>
   </div>
-  <div class="content">
+  <div class="content" data-tid="content">
     <div class="flight-cards" *ngIf="flights$ | async as flights">
       <flight-card
         *ngFor="let flight of flights"

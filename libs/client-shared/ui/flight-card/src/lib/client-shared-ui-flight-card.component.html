@@ -3,20 +3,42 @@
   class="card"
   [ngStyle]="{ 'background-color': selected ? 'rgb(204, 197, 185)' : 'white' }"
   [id]="id"
+  data-tid="flight-card"
+  [attr.data-is-selected]="selected"
 >
   <div class="header">
-    <h2 class="title">{{ flight.from }} - {{ flight.to }}</h2>
+    <h2 class="title" data-tid="header-text">
+      <span data-tid="flight-from">{{ flight.from }}</span> -
+      <span data-tid="flight-to">{{ flight.to }}</span>
+    </h2>
   </div>
   <div class="content">
-    <p>Flight-No.: #{{ flight.id }}</p>
-    <p>Date: {{ flight.date | date: 'long' }}</p>
-    <p>Delayed: {{ flight.delayed | yesNo }}</p>
+    <p>
+      Flight-No.: #<span data-tid="flight-no">{{ flight.id }}</span>
+    </p>
+    <p>
+      Date: <span data-tid="flight-date">{{ flight.date | date: 'long' }}</span>
+    </p>
+    <p>
+      Delayed:
+      <span data-tid="flight-delayed">{{ flight.delayed | yesNo }}</span>
+    </p>
 
     <p>
-      <button class="btn btn-default" *ngIf="!selected" (click)="select()">
+      <button
+        class="btn btn-default"
+        data-tid="select-button"
+        *ngIf="!selected"
+        (click)="select()"
+      >
         Select
       </button>
-      <button class="btn btn-default" *ngIf="selected" (click)="deselect()">
+      <button
+        class="btn btn-default"
+        data-tid="deselect-button"
+        *ngIf="selected"
+        (click)="deselect()"
+      >
         Remove
       </button>
     </p>

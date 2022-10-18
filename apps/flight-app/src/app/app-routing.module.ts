@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { FlightsComponent } from './flights/flights.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 
-const ROUTES: Routes = [
+export const ROUTES: Routes = [
   {
     path: '',
     component: HomeComponent,

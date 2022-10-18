@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlightService getFlights should getFlights with error 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "error": "Internal Server Error",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for /api/flight: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "/api/flight",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`FlightService getFlights should getFlights with success 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Array [
+          Object {
+            "date": "2020-10-15T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": "Graz",
+            "id": 1,
+            "to": "Mallorca",
+          },
+          Object {
+            "date": "2020-10-12T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": "Graz",
+            "id": 2,
+            "to": "Hamburg",
+          },
+        ],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`FlightService searchFlights from Graz to Hamburg should be successful 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Array [
+          Object {
+            "date": "2020-10-12T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": "Graz",
+            "id": 1,
+            "to": "Hamburg",
+          },
+        ],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`FlightService searchFlights from Graz to Hamburg should fail 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "error": "Internal Server Error",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for /api/flight?from=Graz&to=Hamburg: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "/api/flight?from=Graz&to=Hamburg",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`FlightService searchFlights from Graz to undefined should be successful 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Array [
+          Object {
+            "date": "2020-10-12T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": "Graz",
+            "id": 1,
+            "to": undefined,
+          },
+        ],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`FlightService searchFlights from Graz to undefined should fail 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "error": "Internal Server Error",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for /api/flight?from=Graz: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "/api/flight?from=Graz",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`FlightService searchFlights from undefined to Hamburg should be successful 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Array [
+          Object {
+            "date": "2020-10-12T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": undefined,
+            "id": 1,
+            "to": "Hamburg",
+          },
+        ],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`FlightService searchFlights from undefined to Hamburg should fail 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "error": "Internal Server Error",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for /api/flight?to=Hamburg: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "/api/flight?to=Hamburg",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;
+
+exports[`FlightService searchFlights from undefined to undefined should be successful 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        Array [
+          Object {
+            "date": "2020-10-12T06:22:52.4208588+00:00",
+            "delayed": false,
+            "from": undefined,
+            "id": 1,
+            "to": undefined,
+          },
+        ],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`FlightService searchFlights from undefined to undefined should fail 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        HttpErrorResponse {
+          "error": Object {
+            "error": "Internal Server Error",
+          },
+          "headers": HttpHeaders {
+            "headers": Map {},
+            "lazyUpdate": null,
+            "normalizedNames": Map {},
+          },
+          "message": "Http failure response for /api/flight: 500 Internal Server Error",
+          "name": "HttpErrorResponse",
+          "ok": false,
+          "status": 500,
+          "statusText": "Internal Server Error",
+          "url": "/api/flight",
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;

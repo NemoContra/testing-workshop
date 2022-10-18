@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarComponent should match snapshot 1`] = `
+<flight-sidebar
+  __ngContext__="0"
+>
+  <div
+    class="sidebar-wrapper"
+  >
+    <div
+      class="logo"
+    >
+      <a
+        class="simple-text"
+      >
+        <div
+          class="logo-img"
+        >
+          <img
+            alt=""
+            src="../../assets/img/angular2-logo.png"
+          />
+        </div>
+         Flight42 
+      </a>
+    </div>
+    <ul
+      class="nav"
+    >
+      <li>
+        <a
+          data-tid="link-home"
+          href="/"
+          routerlink="/"
+        >
+          <i
+            class="ti-home"
+          />
+          <p>
+            Home
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          data-tid="link-flights"
+          href="/flights"
+          routerlink="/flights"
+        >
+          <i
+            class="ti-arrow-top-right"
+          />
+          <p>
+            All Flights
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          data-tid="link-flight-search"
+          href="/flight-search"
+          routerlink="/flight-search"
+        >
+          <i
+            class="ti-search"
+          />
+          <p>
+            Search Flights
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</flight-sidebar>
+`;
