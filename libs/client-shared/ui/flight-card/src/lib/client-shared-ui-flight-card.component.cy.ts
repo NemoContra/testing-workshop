@@ -19,15 +19,11 @@ describe(ClientSharedUiFlightCardComponent.name, () => {
         flight: { ...flights[0] },
       },
     });
-  });
 
-  it('should render a deselected card', () => {
-    cy.mount(ClientSharedUiFlightCardComponent, {
-      ...config,
-      componentProperties: {
-        selected: false,
-        flight: { ...flights[0] },
-      },
-    });
+    cy.getByTestId('flight-card').should(
+      'have.css',
+      'background-color',
+      'rgb(204, 197, 185)'
+    );
   });
 });
