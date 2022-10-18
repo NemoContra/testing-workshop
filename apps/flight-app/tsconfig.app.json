@@ -7,9 +7,9 @@
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"],
   "exclude": [
+    "jest.config.ts",
     "**/*.test.ts",
     "**/*.spec.ts",
-    "jest.config.ts",
     "cypress/**/*",
     "cypress.config.ts",
     "**/*.cy.ts",
