@@ -75,7 +75,7 @@
       }
     },
     "serve-with-api": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": ["nx serve flight-app", "nx serve api"],
         "parallel": true
@@ -98,7 +98,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/flight-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/flight-app"],
       "options": {
         "jestConfig": "apps/flight-app/jest.config.ts",
         "passWithNoTests": true

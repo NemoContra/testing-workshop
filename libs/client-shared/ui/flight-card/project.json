@@ -5,7 +5,7 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/client-shared/ui/flight-card"],
+      "outputs": ["{workspaceRoot}/coverage/libs/client-shared/ui/flight-card"],
       "options": {
         "jestConfig": "libs/client-shared/ui/flight-card/jest.config.ts",
         "passWithNoTests": true
