@@ -1,9 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CalculatorService should add -1 and -1: result 1`] = `-2`;
+exports[`CalculatorService should add -1 and -1 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        1,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
 
-exports[`CalculatorService should add -1000000 and -2000000: result 1`] = `-3000000`;
+exports[`CalculatorService should add -1000000 and -2000000 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        1,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
 
-exports[`CalculatorService should add 1 and 1: result 1`] = `2`;
+exports[`CalculatorService should add 1 and 1 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        1,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
 
-exports[`CalculatorService should add 1000000 and 2000000: result 1`] = `3000000`;
+exports[`CalculatorService should add 1000000 and 2000000 1`] = `
+Object {
+  "complete": [MockFunction complete] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "error": [MockFunction error],
+  "next": [MockFunction next] {
+    "calls": Array [
+      Array [
+        1,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`CalculatorService should throw an error for negative values 1`] = `
+Object {
+  "complete": [MockFunction complete],
+  "error": [MockFunction error] {
+    "calls": Array [
+      Array [
+        [Error: Both numbers must be greater than zero],
+      ],
+    ],
+    "results": Array [
+      Object {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "next": [MockFunction next],
+}
+`;

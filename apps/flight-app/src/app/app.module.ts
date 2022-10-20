@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FlightsModule } from './flights/flights.module';
 import { FlightSearchModule } from './flight-search/flight-search.module';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { YesNoPipe } from '@testing-workshop/client-shared/util/common';
 
 @NgModule({
   imports: [
@@ -17,12 +19,14 @@ import { FlightSearchModule } from './flight-search/flight-search.module';
     AppRoutingModule,
     FlightsModule,
     FlightSearchModule,
+    YesNoPipe,
   ],
   declarations: [
     AppComponent,
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
+    HelloWorldComponent,
   ],
   bootstrap: [AppComponent],
 })

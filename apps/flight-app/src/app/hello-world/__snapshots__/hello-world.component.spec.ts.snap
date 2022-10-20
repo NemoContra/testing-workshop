@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorldComponent should render "hello Lohr"! 1`] = `
+<ng-component
+  __ngContext__={[Function Number]}
+>
+  <flight-hello-world
+    name="Lohr"
+  >
+    <p>
+      Hello Lohr! 
+    </p>
+    <p
+      data-tid="fine"
+    >
+      I am fine: yes
+    </p>
+  </flight-hello-world>
+</ng-component>
+`;
+
+exports[`HelloWorldComponent should render "hello world"! 1`] = `
+<ng-component
+  __ngContext__="0"
+>
+  <flight-hello-world>
+    <p>
+      Hello world! 
+    </p>
+    <p
+      data-tid="fine"
+    >
+      I am fine: yes
+    </p>
+  </flight-hello-world>
+</ng-component>
+`;

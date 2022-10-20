@@ -24,16 +24,16 @@ export class FlightSearchComponent implements OnDestroy {
   private destroy$$ = new Subject<void>();
 
   searchFlightsFormGroup = new FormGroup({
-    from: new FormControl(''),
-    to: new FormControl(''),
+    from: new FormControl('', { nonNullable: true }),
+    to: new FormControl('', { nonNullable: true }),
   });
 
   flights$: Observable<Flight[]> =
     this.searchFlightsFormGroup.valueChanges.pipe(
       debounceTime(250),
       distinctUntilChanged(),
-      switchMap((searchFlightsQueryParams) =>
-        this.searchFlights(searchFlightsQueryParams as SearchFlightsQueryParams)
+      switchMap((searchFlightsQueryParams: Partial<SearchFlightsQueryParams>) =>
+        this.searchFlights(searchFlightsQueryParams)
       ),
       takeUntil(this.destroy$$)
     );
@@ -45,7 +45,7 @@ export class FlightSearchComponent implements OnDestroy {
   }
 
   private searchFlights(
-    searchFlightsQueryParams: SearchFlightsQueryParams
+    searchFlightsQueryParams: Partial<SearchFlightsQueryParams>
   ): Observable<Flight[]> {
     return this.flightService.searchFlights(searchFlightsQueryParams);
   }
