@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import {
   SearchFlightsQueryParams,
   Flight,
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class FlightService {
-  constructor(private httpClient: HttpClient) {}
+  private httpClient = inject(HttpClient);
 
   getFlights(): Observable<Flight[]> {
     return this.httpClient.get<Flight[]>(`${API_URL}/flight`);

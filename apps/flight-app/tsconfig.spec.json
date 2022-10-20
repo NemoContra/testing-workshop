@@ -6,5 +6,6 @@
     "types": ["jest", "node"]
   },
   "files": ["src/test-setup.ts"],
+  "exclude": ["cypress.config.ts", "cypress/**"],
   "include": ["jest.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/*.d.ts"]
 }
