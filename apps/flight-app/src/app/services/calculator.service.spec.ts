@@ -1,15 +1,12 @@
 import { AddService, CalculatorService } from './calculator.service';
-import { of } from 'rxjs';
 import { createSpyObserver } from '@testing-workshop/shared/util/test-helpers';
+import { createServiceFactory, mockProvider } from '@ngneat/spectator/jest';
+import { of, throwError } from 'rxjs';
 
 describe('CalculatorService', () => {
-  let addService: AddService;
-  let calculatorService: CalculatorService;
-
-  beforeEach(() => {
-    addService = new AddService();
-    jest.spyOn(addService, 'calculate').mockReturnValue(of(1));
-    calculatorService = new CalculatorService(addService);
+  const createService = createServiceFactory({
+    service: CalculatorService,
+    providers: [mockProvider(AddService)],
   });
 
   it.each`
@@ -19,16 +16,25 @@ describe('CalculatorService', () => {
     ${1000000}  | ${2000000}
     ${-1000000} | ${-2000000}
   `('should add $nr1 and $nr2', ({ nr1, nr2 }) => {
+    const spectator = createService();
     const spyOberserver = createSpyObserver();
+    const addService = spectator.inject(AddService);
+    addService.calculate.mockReturnValue(of(1));
 
-    calculatorService.add(nr1, nr2).subscribe(spyOberserver);
+    spectator.service.add(nr1, nr2).subscribe(spyOberserver);
     expect(spyOberserver).toMatchSnapshot();
   });
 
   it('should throw an error for negative values', () => {
+    const spectator = createService();
     const spyOberserver = createSpyObserver();
+    const addService = spectator.inject(AddService);
+    addService.calculateUnsigned.mockReturnValue(
+      throwError(() => new Error('Both numbers must be greater than zero'))
+    );
 
-    calculatorService.addUnsigned(-1, -2).subscribe(spyOberserver);
+    spectator.service.addUnsigned(-1, -2).subscribe(spyOberserver);
+    expect(addService.calculateUnsigned).toHaveBeenCalled();
     expect(spyOberserver).toMatchSnapshot();
   });
 });

@@ -11,6 +11,7 @@ import { FlightsModule } from './flights/flights.module';
 import { FlightSearchModule } from './flight-search/flight-search.module';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { YesNoPipe } from '@testing-workshop/client-shared/util/common';
+import { ColorRedDirective } from './color-red.directive';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { YesNoPipe } from '@testing-workshop/client-shared/util/common';
     FlightsModule,
     FlightSearchModule,
     YesNoPipe,
+    ColorRedDirective,
   ],
   declarations: [
     AppComponent,
